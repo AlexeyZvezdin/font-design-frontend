@@ -506,3 +506,29 @@ button[form="main_form"]:hover {
   color: white;
   background-color: #c0382f;
 }
+
+button[disabled] {
+  border: 1px solid lightgray;
+  color: lightgray;
+}
+
+button[disabled]:hover {
+  background-color: #fff;
+  cursor: initial;
+  color: lightgray;
+  border: 1px solid lightgray;
+}
+
+/* VALIDATE */
+
+.is-valid {
+  border: 1px solid greenyellow;
+}
+
+input[name="email"].is-valid:focus {
+  border: 1px solid greenyellow;
+}
+
+input[name="phone"].is-valid:focus {
+  border: 1px solid greenyellow;
+}

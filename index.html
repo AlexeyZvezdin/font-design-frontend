@@ -104,17 +104,24 @@
                   /></label>
                 </div>
                 <label
-                  ><input type="text" name="phone" placeholder="Телефон"
+                  ><input
+                    id="phone"
+                    oninput="validatePhone(this);"
+                    type="text"
+                    name="phone"
+                    placeholder="Телефон"
                 /></label>
                 <label
                   ><input
+                    id="email"
+                    oninput="validateEmail(this);"
                     type="text"
                     name="email"
                     placeholder="Электронная почта"
                 /></label>
               </div>
             </div>
-            <button form="main_form">Далее →</button>
+            <button disabled id="submitButton" form="main_form">Далее →</button>
           </fieldset>
         </form>
       </main>
@@ -122,5 +129,7 @@
     <script src="setCookie.js"></script>
     <script src="script.js"></script>
     <script src="dropHandler.js"></script>
+    <script src="validation.js"></script>
+    <script src="insertCookie.js"></script>
   </body>
 </html>

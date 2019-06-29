@@ -1,6 +1,6 @@
 let symbol = document.getElementsByClassName("symbol")[0].firstChild;
 
-log(symbol, "uyes");
+// log(symbol, "uyes");
 
 // function getCoords(elem) {
 //   // кроме IE8-
