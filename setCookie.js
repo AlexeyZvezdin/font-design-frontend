@@ -28,7 +28,8 @@ form.onsubmit = function(eve) {
     expires: 7,
     path: ""
   });
-  log(Cookies.get("fieldset"));
+  // log(eve);
+  // log(Cookies.get("fieldset"));
 };
 
 // cookieFormData.fullname = document.Cookies.set("name", "value", {

@@ -490,7 +490,8 @@ input[name="email"]:focus {
 button[form="main_form"] {
   outline: none;
   padding: 5px 10px;
-  margin: 30px 250px;
+  margin-top: 30px;
+  margin-left: 250px;
   background-color: #fff;
   border: 1px solid #c0382f;
   border-radius: 4px;
@@ -517,6 +518,16 @@ button[disabled]:hover {
   cursor: initial;
   color: lightgray;
   border: 1px solid lightgray;
+}
+
+#hintField {
+  margin-top: 26px;
+  float: right;
+  display: block;
+  width: 380px;
+  margin-left: 22px;
+  font-size: 14px;
+  color: rgb(99, 99, 99);
 }
 
 /* VALIDATE */

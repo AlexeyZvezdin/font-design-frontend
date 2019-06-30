@@ -5,12 +5,20 @@ var phoneCheck,
   countryCheck,
   cityCheck,
   companyNameCheck,
-  fullnameCheck;
+  fullnameCheck,
+  fileCheck;
 
 const submitButton = document.getElementById("submitButton");
 
-function validateFile(file) {
-  log(file.dataTransfer);
+function validateFileLoad(file) {
+  log(file);
+  if (file.length > 0) {
+    insertCookie();
+    fileCheck = true;
+    log(" It work");
+  } else {
+    log(" it doesnt");
+  }
 }
 
 function validateIndex(index) {
@@ -103,6 +111,7 @@ function validatePhone(phone) {
 
 function doValidate() {
   if (
+    fileCheck === true &&
     phoneCheck === true &&
     emailCheck === true &&
     fullnameCheck === true &&

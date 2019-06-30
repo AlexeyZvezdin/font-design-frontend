@@ -46,13 +46,10 @@
         <!-- FORM -->
         <!-- DROPZONE -->
         <form id="main_form">
-          <div
-            id="drop_area"
-            class="noselect"
-            ondrop="dropHandler(event);"
+          <div id="drop_area" class="noselect">
+            <!-- ondrop="dropHandler(event);"
             ondragover="highlight(event);"
-            ondragleave="unhighlight(event);"
-          >
+            ondragleave="unhighlight(event);" -->
             <img src="./assets/pdf.png" alt="" draggable="false" />
             <p>
               Перетащите объект в выделенную область или
@@ -66,8 +63,8 @@
                 id="dropZoneInput"
                 multiple
                 accept="image/*"
-                onchange="handleFileLoad(this.files)"
               />
+              <!-- onchange="handleFileLoad(this.files)" -->
             </p>
           </div>
           <!-- end of dropzone -->
@@ -135,15 +132,26 @@
                 /></label>
               </div>
             </div>
-            <button disabled id="submitButton" form="main_form">Далее →</button>
+            <div class="hintFieldBox">
+              <button disabled id="submitButton" form="main_form">
+                Далее →
+              </button>
+              <div id="hintField">
+                Осталось заполнить поля:
+                <span>ФИО</span>, <span>Ваш город</span>, <span>Страна</span>,
+                <span>Название компании</span>, <span>Индекс</span>,
+                <span>Почтовый адрес</span>, <span>Телефон</span>,
+                <span>Email</span>
+              </div>
+            </div>
           </fieldset>
         </form>
       </main>
     </div>
     <script src="setCookie.js"></script>
     <script src="script.js"></script>
-    <script src="insertCookie.js"></script>
     <script src="validation.js"></script>
     <script src="dropHandler.js"></script>
+    <script src="insertCookie.js"></script>
   </body>
 </html>
