@@ -16,6 +16,8 @@ dropArea.addEventListener("dragleave", unhighlight, false);
 
 dropArea.addEventListener("drop", highlightOnLoad, false);
 
+dropArea.addEventListener("drop", validateFile, false);
+
 function highlightOnLoad(e) {
   dropArea.classList.add("highlightOnLoad");
 }

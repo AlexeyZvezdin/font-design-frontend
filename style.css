@@ -532,3 +532,43 @@ input[name="email"].is-valid:focus {
 input[name="phone"].is-valid:focus {
   border: 1px solid greenyellow;
 }
+
+#index.is-valid {
+  border: 1px solid greenyellow;
+}
+
+#index.is-valid:focus {
+  border: 1px solid greenyellow;
+}
+
+input[name="fullname"].is-valid:focus {
+  border: 1px solid greenyellow;
+}
+
+input[name="companyName"].is-valid:focus {
+  border: 1px solid greenyellow;
+}
+
+.location input[name="city"].is-valid {
+  border: 1px solid greenyellow;
+}
+
+.location input[name="city"].is-valid:focus {
+  border: 1px solid greenyellow;
+}
+
+.location input[name="country"].is-valid {
+  border: 1px solid greenyellow;
+}
+
+.location input[name="country"].is-valid:focus {
+  border: 1px solid greenyellow;
+}
+
+.location input[name="postAddress"].is-valid {
+  border: 1px solid greenyellow;
+}
+
+.location input[name="postAddress"].is-valid:focus {
+  border: 1px solid greenyellow;
+}

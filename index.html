@@ -75,17 +75,28 @@
 
           <fieldset>
             <label
-              >Фамилия, имя и отчество<input type="text" name="fullname"
+              >Фамилия, имя и отчество<input
+                id="fullname"
+                type="text"
+                name="fullname"
             /></label>
             <label
-              >Название компании<input type="text" name="companyName"
+              >Название компании<input
+                id="companyName"
+                type="text"
+                name="companyName"
             /></label>
             <div class="inner-fieldset">
               <p>Контактная информация</p>
               <div class="inner-fieldset__fields">
                 <div class="location">
-                  <input type="city" name="city" placeholder="Ваш город" />
-                  <select name="country"
+                  <input
+                    id="city"
+                    type="text"
+                    name="city"
+                    placeholder="Ваш город"
+                  />
+                  <select id="country" name="country"
                     ><option selected disabled>Страна</option>
                     <option>Пункт 1</option>
                     <option>Пункт 2</option>
@@ -94,10 +105,15 @@
                 </div>
                 <div class="postAddress">
                   <label
-                    ><input type="text" name="index" placeholder="Индекс"
+                    ><input
+                      id="index"
+                      type="text"
+                      name="index"
+                      placeholder="Индекс"
                   /></label>
                   <label
                     ><input
+                      id="postAddress"
                       type="text"
                       name="postAddress"
                       placeholder="Почтовый адрес"
@@ -106,7 +122,6 @@
                 <label
                   ><input
                     id="phone"
-                    oninput="validatePhone(this);"
                     type="text"
                     name="phone"
                     placeholder="Телефон"
@@ -114,7 +129,6 @@
                 <label
                   ><input
                     id="email"
-                    oninput="validateEmail(this);"
                     type="text"
                     name="email"
                     placeholder="Электронная почта"
@@ -128,8 +142,8 @@
     </div>
     <script src="setCookie.js"></script>
     <script src="script.js"></script>
-    <script src="dropHandler.js"></script>
-    <script src="validation.js"></script>
     <script src="insertCookie.js"></script>
+    <script src="validation.js"></script>
+    <script src="dropHandler.js"></script>
   </body>
 </html>
