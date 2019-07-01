@@ -19,3 +19,5 @@ let symbol = document.getElementsByClassName("symbol")[0].firstChild;
 
 // // доступная ширина/высота (за вычетом таскбара и т.п.)
 // log(screen.availWidth + " x " + screen.availHeight);
+
+// Не скидывай этот файл

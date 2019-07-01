@@ -33,13 +33,13 @@ function unhighlight(e) {
 }
 
 function dropHandler(e) {
-  console.log(e.dataTransfer.files);
-  validateFileLoad(e.dataTransfer.files);
   e.preventDefault();
+  validateFileLoad(e.dataTransfer.files);
+  insertCookie();
 }
 
 function handleFileLoad(e) {
-  console.log(e.target.files, " Handle worder is working");
+  console.log(e.target.files, " Handle worker is working");
   e.preventDefault();
   validateFileLoad(e.target.files);
   dropArea.classList.add("highlightOnLoad");

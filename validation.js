@@ -11,13 +11,14 @@ var phoneCheck,
 const submitButton = document.getElementById("submitButton");
 
 function validateFileLoad(file) {
-  log(file);
+  log(file.length);
   if (file.length > 0) {
-    insertCookie();
     fileCheck = true;
-    log(" It work");
+    log(" It works");
+    fileHint.setAttribute("hidden", "hidden");
   } else {
     log(" it doesnt");
+    fileHint.removeAttribute("hidden");
   }
 }
 
@@ -26,9 +27,11 @@ function validateIndex(index) {
   if (el.value.length === 6 && !isNaN(el.value)) {
     el.classList.add("is-valid");
     indexCheck = true;
+    indexHint.setAttribute("hidden", "hidden");
   } else {
     el.classList.remove("is-valid");
     indexCheck = false;
+    indexHint.removeAttribute("hidden");
   }
   doValidate();
 }
@@ -38,9 +41,11 @@ function validateFullname(fullname) {
   if (el.value.length >= 6 && el.value.indexOf(" ") > 2) {
     el.classList.add("is-valid");
     fullnameCheck = true;
+    fullnameHint.setAttribute("hidden", "hidden");
   } else {
     el.classList.remove("is-valid");
     fullnameCheck = false;
+    fullnameHint.removeAttribute("hidden");
   }
   doValidate();
 }
@@ -50,9 +55,11 @@ function validateCompanyName(companyName) {
   if (el.value.length >= 3) {
     el.classList.add("is-valid");
     companyNameCheck = true;
+    companyNameHint.setAttribute("hidden", "hidden");
   } else {
     el.classList.remove("is-valid");
     companyNameCheck = false;
+    companyNameHint.removeAttribute("hidden");
   }
   doValidate();
 }
@@ -62,9 +69,11 @@ function validateCountry(Country) {
   if (el.value) {
     el.classList.add("is-valid");
     countryCheck = true;
+    countryHint.setAttribute("hidden", "hidden");
   } else {
     el.classList.remove("is-valid");
     countryCheck = false;
+    countryHint.removeAttribute("hidden");
   }
   doValidate();
 }
@@ -74,9 +83,11 @@ function validateCity(city) {
   if (el.value.length >= 2) {
     el.classList.add("is-valid");
     cityCheck = true;
+    cityHint.setAttribute("hidden", "hidden");
   } else {
     el.classList.remove("is-valid");
     cityCheck = false;
+    cityHint.removeAttribute("hidden");
   }
   doValidate();
 }
@@ -87,9 +98,11 @@ function validateEmail(email) {
   if (emailRegex.test(el.value) && el.value !== "") {
     el.classList.add("is-valid");
     emailCheck = true;
+    emailHint.setAttribute("hidden", "hidden");
   } else {
     el.classList.remove("is-valid");
     emailCheck = false;
+    emailHint.removeAttribute("hidden");
   }
   log(emailRegex.test(email.value));
   doValidate();
@@ -101,9 +114,11 @@ function validatePhone(phone) {
   if (phoneRegex.test(el.value) && el.value !== "") {
     el.classList.add("is-valid");
     phoneCheck = true;
+    phoneHint.setAttribute("hidden", "hidden");
   } else {
     el.classList.remove("is-valid");
     phoneCheck = false;
+    phoneHint.removeAttribute("hidden");
   }
   log(phoneRegex.test(el.value));
   doValidate();
@@ -121,12 +136,17 @@ function doValidate() {
   ) {
     log("companyNameCheck:", companyNameCheck, "cityCheck");
     submitButton.removeAttribute("disabled");
+    hintField.setAttribute("hidden", "hidden");
+    hintSuccess.removeAttribute("hidden");
   } else {
     log("Invalid check");
     submitButton.setAttribute("disabled", "disabled");
+    hintField.removeAttribute("hidden");
+    hintSuccess.setAttribute("hidden", "hidden");
   }
 }
 
+// Input elements
 const email = document.getElementById("email");
 const phone = document.getElementById("phone");
 const index = document.getElementById("index");
@@ -142,3 +162,18 @@ fullname.addEventListener("input", validateFullname, false);
 companyName.addEventListener("input", validateCompanyName, false);
 city.addEventListener("input", validateCity, false);
 country.addEventListener("input", validateCountry, false);
+
+// Span hint elements
+
+const emailHint = document.getElementById("emailField");
+const phoneHint = document.getElementById("phoneField");
+const indexHint = document.getElementById("indexField");
+const fullnameHint = document.getElementById("nameField");
+const companyNameHint = document.getElementById("companyField");
+const cityHint = document.getElementById("cityField");
+const countryHint = document.getElementById("countryField");
+const fileHint = document.getElementById("fileField");
+
+// hint divs
+const hintField = document.getElementById("hintField");
+const hintSuccess = document.getElementById("hintFieldSuccess");

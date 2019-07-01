@@ -138,10 +138,17 @@
               </button>
               <div id="hintField">
                 Осталось заполнить поля:
-                <span>ФИО</span>, <span>Ваш город</span>, <span>Страна</span>,
-                <span>Название компании</span>, <span>Индекс</span>,
-                <span>Почтовый адрес</span>, <span>Телефон</span>,
-                <span>Email</span>
+                <span id="nameField">ФИО, </span>
+                <span id="cityField">Ваш город, </span>
+                <span id="countryField">Страна, </span>
+                <span id="companyField">Название компании, </span>
+                <span id="indexField">Индекс, </span>
+                <span id="phoneField">Телефон, </span>
+                <span id="emailField">Email</span>
+                <span id="fileField">Загрузить файл</span>
+              </div>
+              <div id="hintFieldSuccess" hidden>
+                Все необходимые поля заполнены, спасибо!
               </div>
             </div>
           </fieldset>
@@ -149,7 +156,6 @@
       </main>
     </div>
     <script src="setCookie.js"></script>
-    <script src="script.js"></script>
     <script src="validation.js"></script>
     <script src="dropHandler.js"></script>
     <script src="insertCookie.js"></script>
