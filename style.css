@@ -310,6 +310,24 @@ form fieldset input {
   font-weight: 200;
 }
 
+form fieldset input:focus {
+  outline: none;
+  border: 1px solid #c0382f;
+  box-shadow: none;
+}
+
+form fieldset .location input:focus {
+  outline: none;
+  border: 1px solid #c0382f;
+  box-shadow: none;
+}
+
+form fieldset .postAddress input:focus {
+  outline: none;
+  border: 1px solid #c0382f;
+  box-shadow: none;
+}
+
 [name="fullname"] {
   box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
   width: 510px;
@@ -318,15 +336,6 @@ form fieldset input {
   border: 1px solid lightgray;
   padding: 1px 2px;
   box-sizing: border-box;
-}
-
-/* form fieldset input {
-} */
-
-[name="fullname"]:focus {
-  outline: none;
-  border: 1px solid #c0382f;
-  box-shadow: none;
 }
 
 [name="companyName"] {
@@ -338,12 +347,6 @@ form fieldset input {
   border: 1px solid lightgray;
 
   padding: 1px 2px;
-}
-
-[name="companyName"]:focus {
-  outline: none;
-  border: 1px solid #c0382f;
-  box-shadow: none;
 }
 
 /* INNER FIELDSET */
@@ -401,12 +404,6 @@ form fieldset input {
   box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
 }
 
-.location input[name="city"]:focus {
-  outline: none;
-  border: 1px solid #c0382f;
-  box-shadow: none;
-}
-
 /* POST ADRESS */
 
 .postAddress {
@@ -439,18 +436,6 @@ form fieldset input {
   box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
 }
 
-.postAddress input[name="index"]:focus {
-  outline: none;
-  border: 1px solid #c0382f;
-  box-shadow: none;
-}
-
-.postAddress input[name="postAddress"]:focus {
-  outline: none;
-  border: 1px solid #c0382f;
-  box-shadow: none;
-}
-
 /* END POSTADDRESS */
 
 [name="phone"] {
@@ -479,17 +464,6 @@ form fieldset input {
   display: block;
 }
 
-input[name="phone"]:focus {
-  outline: none;
-  border: 1px solid #c0382f;
-  box-shadow: none;
-}
-
-input[name="email"]:focus {
-  outline: none;
-  border: 1px solid #c0382f;
-  box-shadow: none;
-}
 /* END OF INNER FIELDSET */
 
 /* BUTTON */
