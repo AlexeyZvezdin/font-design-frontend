@@ -29,10 +29,15 @@ p {
   font-family: "Circe";
 }
 
+body {
+  background-color: #eaeaea;
+}
+
 .page {
   margin: 50px auto 100px;
   max-width: 1100px;
 }
+
 [hidden] {
   display: none !important;
 }
@@ -100,7 +105,6 @@ header div {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  background-color: #ff11;
 }
 
 .menu__box {
@@ -158,7 +162,7 @@ main > img {
 /* BREADCRUMBS NAV */
 
 .breadcrumbs {
-  margin-left: 100px;
+  margin-left: 120px;
   color: #c7c7c7;
   font-family: "Circe";
 }
@@ -188,7 +192,7 @@ main > img {
   padding: 15px;
   border: 2px dashed #c7c7c7;
   border-radius: 15px;
-  width: 800px;
+  width: 850px;
   height: 100px;
   font-family: "Circe";
 }
@@ -301,13 +305,17 @@ form fieldset > label {
   white-space: nowrap;
 }
 
+form fieldset input {
+  font-size: 18px;
+  font-weight: 200;
+}
+
 [name="fullname"] {
   box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
   width: 510px;
   border-radius: 3px;
   height: 34px;
   border: 1px solid lightgray;
-  font-size: 22px;
   padding: 1px 2px;
   box-sizing: border-box;
 }
@@ -328,7 +336,7 @@ form fieldset > label {
   border-radius: 3px;
   height: 34px;
   border: 1px solid lightgray;
-  font-size: 22px;
+
   padding: 1px 2px;
 }
 
@@ -342,7 +350,6 @@ form fieldset > label {
 
 .inner-fieldset {
   margin-top: 32px;
-  font-size: 18px;
   color: rgb(41, 41, 41);
   line-height: 1.167;
   display: flex;
@@ -366,6 +373,7 @@ form fieldset > label {
 
 .inner-fieldset > p {
   margin-top: 6px;
+  font-size: 18px;
 }
 
 .location [name="country"] {
@@ -373,6 +381,7 @@ form fieldset > label {
   background-color: rgb(199, 199, 199);
   height: 32px;
   color: white;
+  font-weight: 200;
   font-size: 18px;
   width: 210px;
   padding-top: 2px;
@@ -381,14 +390,13 @@ form fieldset > label {
 }
 
 .location input[name="city"] {
-  font-size: 18px;
-  font-weight: 200;
   box-sizing: border-box;
   border-radius: 2px;
   width: 290px;
   height: 34px;
   border: 1px solid lightgray;
   padding: 1px 2px;
+  padding-left: 10px;
   border-radius: 3px;
   box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
 }
@@ -408,13 +416,12 @@ form fieldset > label {
 
 .postAddress input[name="index"] {
   width: 140px;
-  font-size: 18px;
-  font-weight: 200;
   box-sizing: border-box;
   border-radius: 2px;
   height: 34px;
   border: 1px solid lightgray;
   padding: 1px 2px;
+  padding-left: 10px;
   border-radius: 3px;
   box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
   margin-right: 10px;
@@ -422,13 +429,12 @@ form fieldset > label {
 
 .postAddress input[name="postAddress"] {
   width: 360px;
-  font-size: 18px;
-  font-weight: 200;
   box-sizing: border-box;
   border-radius: 2px;
   height: 34px;
   border: 1px solid lightgray;
   padding: 1px 2px;
+  padding-left: 10px;
   border-radius: 3px;
   box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
 }
@@ -453,11 +459,10 @@ form fieldset > label {
   border-radius: 3px;
   height: 34px;
   border: 1px solid lightgray;
-  font-size: 18px;
-  font-weight: 200;
   box-sizing: border-box;
   border-radius: 2px;
   padding: 1px 2px;
+  padding-left: 10px;
   margin-top: 20px;
 }
 
@@ -468,9 +473,8 @@ form fieldset > label {
   border-radius: 3px;
   height: 34px;
   border: 1px solid lightgray;
-  font-size: 18px;
   padding: 1px 2px;
-  font-weight: 200;
+  padding-left: 10px;
   box-sizing: border-box;
   display: block;
 }
@@ -547,11 +551,21 @@ input[name="phone"].is-valid:focus {
   border: 1px solid greenyellow;
 }
 
+/* .location zone */
+
 #index.is-valid {
   border: 1px solid greenyellow;
 }
 
 #index.is-valid:focus {
+  border: 1px solid greenyellow;
+}
+
+#postAddress.is-valid {
+  border: 1px solid greenyellow;
+}
+
+#postAddress.is-valid:focus {
   border: 1px solid greenyellow;
 }
 
@@ -579,14 +593,6 @@ input[name="companyName"].is-valid:focus {
   border: 1px solid greenyellow;
 }
 
-.location input[name="postAddress"].is-valid {
-  border: 1px solid greenyellow;
-}
-
-.location input[name="postAddress"].is-valid:focus {
-  border: 1px solid greenyellow;
-}
-
 /* HINT DIV */
 
 #emailField,
@@ -596,6 +602,7 @@ input[name="companyName"].is-valid:focus {
 #companyField,
 #cityField,
 #countryField,
+#postAddressField,
 #fileField {
   color: #c0382f;
 }

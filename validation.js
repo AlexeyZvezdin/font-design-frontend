@@ -1,8 +1,8 @@
 var phoneCheck,
   emailCheck,
   indexCheck,
-  postAddressCheck,
   countryCheck,
+  postAddressCheck,
   cityCheck,
   companyNameCheck,
   fullnameCheck,
@@ -22,6 +22,21 @@ function validateFileLoad(file) {
   }
 }
 
+function validatePostAddress(postAddress) {
+  let el = postAddress.srcElement;
+  log(el.value.length);
+  if (el.value.length > 6) {
+    el.classList.add("is-valid");
+    postAddressCheck = true;
+    postAddressHint.setAttribute("hidden", "hidden");
+  } else {
+    el.classList.remove("is-valid");
+    postAddressCheck = false;
+    postAddressHint.removeAttribute("hidden");
+  }
+  doValidate();
+}
+
 function validateIndex(index) {
   let el = index.srcElement;
   if (el.value.length === 6 && !isNaN(el.value)) {
@@ -38,7 +53,7 @@ function validateIndex(index) {
 
 function validateFullname(fullname) {
   let el = fullname.srcElement;
-  if (el.value.length >= 6 && el.value.indexOf(" ") > 2) {
+  if (el.value.length >= 4 && el.value.indexOf(" ") >= 2) {
     el.classList.add("is-valid");
     fullnameCheck = true;
     fullnameHint.setAttribute("hidden", "hidden");
@@ -130,6 +145,7 @@ function doValidate() {
     phoneCheck === true &&
     emailCheck === true &&
     fullnameCheck === true &&
+    postAddressCheck === true &&
     countryCheck === true &&
     indexCheck === true &&
     cityCheck === true
@@ -154,6 +170,7 @@ const fullname = document.getElementById("fullname");
 const companyName = document.getElementById("companyName");
 const city = document.getElementById("city");
 const country = document.getElementById("country");
+const postAddress = document.getElementById("postAddress");
 
 email.addEventListener("input", validateEmail, false);
 phone.addEventListener("input", validatePhone, false);
@@ -162,6 +179,7 @@ fullname.addEventListener("input", validateFullname, false);
 companyName.addEventListener("input", validateCompanyName, false);
 city.addEventListener("input", validateCity, false);
 country.addEventListener("input", validateCountry, false);
+postAddress.addEventListener("input", validatePostAddress, false);
 
 // Span hint elements
 
@@ -173,6 +191,7 @@ const companyNameHint = document.getElementById("companyField");
 const cityHint = document.getElementById("cityField");
 const countryHint = document.getElementById("countryField");
 const fileHint = document.getElementById("fileField");
+const postAddressHint = document.getElementById("postAddressField");
 
 // hint divs
 const hintField = document.getElementById("hintField");
